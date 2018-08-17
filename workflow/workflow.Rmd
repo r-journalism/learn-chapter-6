@@ -2,6 +2,8 @@
 title: "R Markdown Workflow"
 author: "Andrew Ba Tran"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     toc_float: yes
@@ -61,12 +63,21 @@ Get into this habit early. Future readers of the code will be grateful for the c
 ## Use projects to organize
 
 
-<img src="images/project.png" alt="Projects in RStudio", class="shadow", style="width:70%">
+```{r img1, echo = F, out.width="100%"}
+library(knitr)
+include_graphics("images/project.png")
+```
+
+
+
 
 #### Do not dump your scripts into a folder
 
 
-<img src="images/folder_rscripts.png" alt="Cut the cord", class="shadow", style="width:70%">
+
+```{r img2, echo = F, out.width="100%"}
+include_graphics("images/folder_rscripts.png")
+```
 
 #### One folder per project
 
@@ -75,7 +86,12 @@ Get into this habit early. Future readers of the code will be grateful for the c
 - Can run parallel projects
 
 
-<img src="images/multiple_projects.png" alt="Cut the cord", class="shadow", style="width:70%">
+```{r img3, echo = F, out.width="100%"}
+include_graphics("images/multiple_projects.png")
+```
+
+
+
 
 
 ## Use portable file paths 
@@ -192,5 +208,8 @@ payroll <- read_csv("data/bostonpayroll2013.csv")
 
 This will make sure you've optimized your data ingesting and cleaning process and aren't working with a misstep in your process.
 
-<img src="images/cut_the_cord.png" alt="Cut the cord", class="shadow", style="width:70%">
 
+
+```{r img4, echo = F, out.width="100%"}
+include_graphics("images/cut_the_cord.png")
+```

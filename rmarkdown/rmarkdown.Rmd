@@ -20,7 +20,11 @@ By now you've inadvertantly witnessed the different content that R Markdown can 
 
 R Markdown is R code + **Markdown**.
 
-<img src="images/rmdfiles.png">
+```{r img1, echo = F, out.width="100%"}
+library(knitr)
+include_graphics("images/rmdfiles.png")
+```
+
 
 
 ## What is Markdown?
@@ -29,7 +33,11 @@ A very easy way to add formating to plain text created by John Gruber (of Daring
 
 In the image below, the text on the left was interpreted as HTML on the right.
 
-<img src="images/markdown.png">
+
+```{r img2, echo = F, out.width="100%"}
+include_graphics("images/markdown.png")
+```
+
 
 Github has a [nice guide](https://guides.github.com/features/mastering-markdown/) on Markdown.
 
@@ -70,7 +78,10 @@ Exporting your work into PDFs can be effective.
 
 *For this to work, be sure to get [LaTex](https://www.latex-project.org/get/) installed first.*
 
-<img src="images/pdf_output.png">
+
+```{r img3, echo = F, out.width="100%"}
+include_graphics("images/pdf_output.png")
+```
 
 
 ### IPython Notebooks
@@ -79,7 +90,11 @@ Notebooks are very popular.
 
 This is how pandas and ipython notebooks render when uploaded to Github.
 
-<img src="images/pythonnotebook.png" height="300">
+
+```{r img4, echo = F, out.width="100%"}
+include_graphics("images/pythonnotebook.png")
+```
+
 
 It renders well and matches the experience of someone coding in that environment.
 
@@ -87,7 +102,10 @@ It renders well and matches the experience of someone coding in that environment
 
 How does an R Markdown file look on Github?
 
-<img src="images/markdownoutput.png" height="300">
+
+```{r img5, echo = F, out.width="100%"}
+include_graphics("images/markdownoutput.png")
+```
 
 Not well.
 
@@ -103,19 +121,24 @@ R Markdown will let you output as HTML, which you can still host on Github Pages
 
 Rendering in HTML lets you add CSS and Javascript, allowing for the inclusion of content like the interactive table below.
 
-```{r datatable, warning=F, message=F}
+```{r datatable, warning=F}
 library(DT)
 library(dplyr)
 library(readr)
 payroll <- read_csv("../data/bostonpayroll2013.csv") %>% 
   select(NAME, TITLE, DEPARTMENT, REGULAR, OVERTIME) %>% 
   filter(row_number()<100)
+```
+
+```{r dt1}
 datatable(payroll, extensions = 'Buttons', options = list(
     dom = 'Bfrtip',
     buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
   )
 )
 ```
+
+
 
 This table was rendered with the **DT** package. 
 
@@ -141,7 +164,10 @@ How often have you had someone email you asking if you could resend your summari
 
 This is what their downloads or desktop folder might look like. It's easy to see why they might have lost track of it.
 
-<img src="images/bad_desktop.png">
+
+```{r img16, echo = F, out.width="100%"}
+include_graphics("images/bad_desktop.png")
+```
 
 Send them links instead!
 
@@ -164,17 +190,30 @@ Follow the instructions below.
 
 at **File > New File > R Markdown**. 
 
-<div style="max-width:500px; margin-left:auto; margin-right:auto;"><img src="images/menu.png"></div>
+
+```{r img6, echo = F, out.width="50%"}
+include_graphics("images/menu.png")
+```
+
 
 Title the R Markdown file and select **HTML** as the output for now.
 
-<div style="max-width:400px; margin-left:auto; margin-right:auto;"><img src="images/html.png"></div>
+
+```{r img17, echo = F, out.width="70%"}
+include_graphics("images/html.png")
+```
+
+
 
 The default file created comes with code already included to give you a guidance on syntax and how it should be structured.
 
 #### .Rmd structure
 
-<div style="width:50%; margin-left:auto; margin-right:auto;"><img src="images/layout2.png"></div>
+
+```{r img7, echo = F, out.width="50%"}
+include_graphics("images/layout2.png")
+```
+
 
 Every .Rmd file starts out the same at the top.
 
@@ -216,7 +255,11 @@ It'll be easier to navigate to in the future with the pulldown menu at the botto
 
 It also will be useful to narrow down where code errors might occur.
 
-<img src="images/labels.png">
+
+```{r img8, echo = F, out.width="100%"}
+include_graphics("images/labels.png")
+```
+
 
 ### 2c. Notebooks style
 
@@ -226,14 +269,22 @@ Click the green arrow next to each chunk.
 
 *Hopefully, you've already been doing this in our coding walkthroughs in class.* 
 
-<img src="images/chunky.png">
+
+```{r img9, echo = F, out.width="50%"}
+include_graphics("images/chunky.png")
+```
+
 
 
 ### 3. Knit document to create report
 
 Use knit button (the yarn ball!) at the top left or type **render()** to create the output file(s).
 
-<div style="width:60%; margin-left:auto; margin-right:auto;"><img src="images/knit_button.png"></div>
+
+```{r img10, echo = F, out.width="60%"}
+include_graphics("images/knit_button.png")
+```
+
 
 ### 3b. Check out the build log
 
@@ -242,17 +293,31 @@ Warnings and errors will appear in the console below.
 
 Also measures progress by chunks, which is why it's important to label them.
 
-<img src="images/console.png">
+
+```{r img11, echo = F, out.width="100%"}
+include_graphics("images/console.png")
+```
+
+
 
 ### 4. Preview output in IDE window
 
-<img src="images/preview.png">
+
+```{r img112, echo = F, out.width="100%"}
+include_graphics("images/preview.png")
+```
+
+
 
 ### 5. Output file
 
 You started with a .Rmd file and clicking knit HTML also generated a .html file.
 
-<div style="width:50%; margin-left:auto; margin-right:auto;"><img src="images/testpage.png"></div>
+
+```{r img12, echo = F, out.width="50%"}
+include_graphics("images/testpage.png")
+```
+
 
 It's all there in your project folder now.
 

@@ -2,6 +2,8 @@
 title: "More R Markdown"
 author: "Andrew Ba Tran"
 output:
+  pdf_document:
+    toc: yes
   html_document:
     toc: yes
     toc_float: yes
@@ -40,11 +42,21 @@ Delete everything beneath the YAML code.
 
 Replace it with [this code](https://gist.github.com/andrewbtran/1af1ad6a9059e2521de53976e4934a1c):
 
-<script src="https://gist.github.com/andrewbtran/1af1ad6a9059e2521de53976e4934a1c.js"></script>
+
+```{r img1b, echo = F, out.width="100%"}
+library(knitr)
+include_graphics("images/chunk_code1.png")
+```
+
 
 Save the file as 01_chunk.Rmd and click the knit button.
 
-![](images/warnings.png)
+
+```{r img1, echo = F, out.width="100%"}
+include_graphics("images/warnings.png")
+```
+
+
 
 Yikes, okay, that's way too much. 
 
@@ -58,11 +70,22 @@ Type [the code](https://gist.github.com/andrewbtran/fb45ca115207549ce6d136917bf8
 
 The new code can be found on lines 6 and 16.
 
+
+```{r img2b, echo = F, out.width="100%"}
+include_graphics("images/chunk_code2.png")
+```
+
 <script src="https://gist.github.com/andrewbtran/fb45ca115207549ce6d136917bf8d24c.js"></script>
 
 Save the file as 02_chunk.Rmd and click the knit button.
 
-![](images/chunk2.png)
+
+```{r img2, echo = F, out.width="100%"}
+include_graphics("images/chunk2.png")
+```
+
+
+
 
 Now that's much more readable and gets to the data quicker.
 
@@ -78,11 +101,20 @@ Type [the code](https://gist.github.com/andrewbtran/8784cf26ad18309a17687d3e4165
 
 The new code can be found on 8 and 17.
 
-<script src="https://gist.github.com/andrewbtran/8784cf26ad18309a17687d3e416541ed.js"></script>
+
+
+```{r img3b, echo = F, out.width="100%"}
+include_graphics("images/chunk_code3.png")
+```
+
 
 Save the file as 03_chunk.Rmd and click the knit button.
 
-![](images/chunk3.png)
+
+```{r img3, echo = F, out.width="100%"}
+include_graphics("images/chunk3.png")
+```
+
 
 ### Inline R code
 
@@ -96,11 +128,21 @@ Type [the code](https://gist.github.com/andrewbtran/cad0673cdd4cf527f6781a94f597
 
 The new code can be found on line 29 and 31.
 
-<script src="https://gist.github.com/andrewbtran/cad0673cdd4cf527f6781a94f597bd0c.js"></script>
+
+```{r img4b, echo = F, out.width="100%"}
+include_graphics("images/chunk_code4.png")
+```
+
 
 Save the file as 04_chunk.Rmd and click the knit button.
 
-![](images/chunk4.png)
+
+```{r img4, echo = F, out.width="100%"}
+include_graphics("images/chunk4.png")
+```
+
+
+
 
 This type of self-generating analysis is important because if you get the next year of payroll data, running this report will sub in the new city employee who makes the most money automatically.
 
@@ -115,11 +157,20 @@ Type [the code](https://gist.github.com/andrewbtran/1751cc2e09acae6f1778f481b86b
 
 The new code can be found all the way down on line 60 and 61.
 
-<script src="https://gist.github.com/andrewbtran/1751cc2e09acae6f1778f481b86b9a17.js"></script>
+
+```{r img5b, echo = F, out.width="100%"}
+include_graphics("images/chunk_code5.png")
+```
 
 Save the file as 05_chunk.Rmd and click the knit button.
 
-![](images/chunk5.png)
+
+```{r img5, echo = F, out.width="100%"}
+include_graphics("images/chunk5.png")
+```
+
+
+
 
 ### Change theme and style
 
@@ -144,11 +195,18 @@ Type [the code](https://gist.github.com/andrewbtran/ccbdf93edfbf2d700aafa2eaea39
 
 The new code is at the top in the YAML section.
 
-<script src="https://gist.github.com/andrewbtran/ccbdf93edfbf2d700aafa2eaea39e6f3.js"></script>
+
+```{r img6b, echo = F, out.width="100%"}
+include_graphics("images/chunk_code6.png")
+```
 
 Save the file as 06_chunk.Rmd and click the knit button.
 
-![](images/chunk6.png)
+
+```{r img6, echo = F, out.width="100%"}
+include_graphics("images/chunk6.png")
+```
+
 
 
 ### Table of contents
@@ -162,11 +220,25 @@ Type [the code](https://gist.github.com/andrewbtran/59cebe7576e99a7773f3e694b0f0
 The new code is at the top in the YAML section.
 
 
-<script src="https://gist.github.com/andrewbtran/59cebe7576e99a7773f3e694b0f0bb3b.js"></script>
+```{r img7b, echo = F, out.width="100%"}
+include_graphics("images/chunk_code7.png")
+```
+
+
+
+```{r img8b, echo = F, out.width="100%"}
+include_graphics("images/chunk_code8.png")
+```
 
 Save the file as 07_chunk.Rmd and click the knit button.
 
-![](images/chunk7.png)
+
+```{r img7, echo = F, out.width="100%"}
+include_graphics("images/chunk7.png")
+```
+
+
+
 
 ### Next steps?
 
